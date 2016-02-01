@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+
+  get 'wechat', to: 'wechat#show'
+  post 'wechat', to: 'wechat#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
