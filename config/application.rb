@@ -23,5 +23,9 @@ module Timeline
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.wechat_token = "loki951753"
+    config.wechat_appid = "wx3ffb85875df8712a"
+    config.wechat_appsecret = "820e7ff4190a357a5b9d7ab145a4865b"
+
+    config.cache_store = :redis_store, "redis://localhost:6379/0/cache", {expires_in: 90.minutes}
   end
 end
